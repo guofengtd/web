@@ -210,9 +210,11 @@
 			files = (
 			);
 			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-web/Pods-web-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-web/Pods-web-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -281,6 +283,7 @@
 /* Begin XCBuildConfiguration section */
 		F95B32EE2AD828ED00A19145 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2BF548B742DBAB722FC74A7 /* Pods-web.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -341,6 +344,7 @@
 		};
 		F95B32EF2AD828ED00A19145 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2E8688E2ED3CD9A27F1D77E /* Pods-web.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
