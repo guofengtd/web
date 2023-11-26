@@ -13,6 +13,8 @@
 @property (nonatomic, strong) UITextField *hostField;
 @property (nonatomic, strong) UITextField *portField;
 
+@property (nonatomic, strong) UITapGestureRecognizer *tap;
+
 @end
 
 @implementation SettingsViewController
@@ -24,7 +26,8 @@
     UIView *container = [UIView new];
     [view addSubview:container];
     [container mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.center.equalTo(view);
+        make.centerX.equalTo(view);
+        make.bottom.equalTo(view.mas_centerY);
     }];
     
     UILabel *hostLabel = [UILabel new];
@@ -80,7 +83,15 @@
     }];
     self.portField = portField;
     
+    self.tap = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                       action:@selector(tapView)];
+    
+    [view addGestureRecognizer:self.tap];
     self.view = view;
+}
+
+- (void)tapView {
+    [self.view endEditing:YES];
 }
 
 - (void)viewDidLoad {
